@@ -1,0 +1,75 @@
+/* 学术主题增强样式 */
+:root {
+  --academic-blue: #2c3e50;
+  --thesis-red: #8b0000;
+  --citation-grey: #666;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', SimSun, serif;
+  line-height: 1.8;
+  color: var(--academic-blue);
+  background: #f8f9fa;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 3px double var(--thesis-red);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--thesis-red);
+  margin-top: 2rem;
+}
+
+blockquote {
+  background: #f3f5f7;
+  border-left: 4px solid var(--citation-grey);
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+/* 学术图标装饰 */
+h2::before {
+  content: "📖";
+  margin-right: 0.8rem;
+  opacity: 0.8;
+}
+
+/* 文献引用样式 */
+.reference {
+  text-indent: -2em;
+  padding-left: 2em;
+  color: var(--citation-grey);
+  font-size: 0.9em;
+}
+
+/* 响应式表格 */
+table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+}
+th {
+  background: var(--academic-blue);
+  color: white;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .columns {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%!important;
+  }
+}
